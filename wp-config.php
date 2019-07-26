@@ -39,7 +39,7 @@ define( 'DB_COLLATE', '' );
 
 define( 'WP_HOME', 'http://localhost/developer_pro/' );
 define( 'WP_SITEURL', 'http://localhost/developer_pro/' );
-
+define('FS_METHOD', 'direct');
 /**#@+
  * Authentication Unique Keys and Salts.
  *
