@@ -39,7 +39,10 @@ define( 'DB_COLLATE', '' );
 
 define( 'WP_HOME', 'http://localhost/developer_pro/' );
 define( 'WP_SITEURL', 'http://localhost/developer_pro/' );
+
 define('FS_METHOD', 'direct');
+define('FS_CHMOD_DIR', (0775 & ~ umask()));
+define('FS_CHMOD_FILE', (0664 & ~ umask()));
 /**#@+
  * Authentication Unique Keys and Salts.
  *
