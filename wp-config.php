@@ -40,9 +40,34 @@ define( 'DB_COLLATE', '' );
 define( 'WP_HOME', 'http://localhost/developer_pro/' );
 define( 'WP_SITEURL', 'http://localhost/developer_pro/' );
 
+/*Filer Permission*/
 define('FS_METHOD', 'direct');
 define('FS_CHMOD_DIR', (0775 & ~ umask()));
 define('FS_CHMOD_FILE', (0664 & ~ umask()));
+/*End Filer Permission*/
+
+/*Speed Up WP*/
+#define( 'COOKIE_DOMAIN', '' );
+#define( 'COMPRESS_CSS', true );
+#define( 'COMPRESS_SCRIPTS', true );
+#define( 'ENFORCE_GZIP', true );     
+#define( 'ENABLE_CACHE', true);  
+#define( 'TEMPLATEPATH', '');
+#define( 'STYLESHEETPATH', '');
+/*End Speed Up WP*/
+
+/*Optimum Memory Limit*/
+define( 'WP_MEMORY_LIMIT', '512M');
+/*End Optimum Memory Limit*/
+
+
+/*Debugging*/
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_DISPLAY', true );
+/*End Debugging*/
+
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -83,7 +108,6 @@ $table_prefix = 'dpr_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define( 'WP_DEBUG', false );
 
 /* That's all, stop editing! Happy publishing. */
 
