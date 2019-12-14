@@ -18,6 +18,15 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+	<?php 
+		if(have_rows('header_scripts','option')){
+			while (have_rows('header_scripts','option')) {
+				the_row();
+				echo html_entity_decode(get_sub_field('tracking_scripts', 'option'), ENT_QUOTES, 'UTF-8');
+			}
+		}
+	?>
+	
 </head>
 
 <body <?php body_class(); ?>>

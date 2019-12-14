@@ -60,7 +60,7 @@ function defer_parsing_of_js ( $url ) {
     if ( strpos( $url, 'jquery.js' ) ) return $url;
     return "$url' defer='defer";
 }
-add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+#add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
 }
 /*End Defer parsing js*/
 
@@ -69,7 +69,7 @@ function _remove_script_version( $src ){
 	$parts = explode( '?', $src );
 	return $parts[0];
 }
-add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
+#add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
 /*End Remove Script Version*/
 
 
@@ -77,5 +77,3 @@ add_filter( 'xmlrpc_methods', function( $methods ) {
    unset( $methods['pingback.ping'] );
    return $methods;
 } );
-
-/*echo html_entity_decode(get_field('zendesk_support_code', 'option'), ENT_QUOTES, 'UTF-8');  */
