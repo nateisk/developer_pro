@@ -198,3 +198,4 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 /*End Theme Option*/
+echo get_template_directory();

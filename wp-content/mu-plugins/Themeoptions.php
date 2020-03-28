@@ -1,7 +1,6 @@
 <?php
 add_filter('use_block_editor_for_post', '__return_false', 10);
-add_filter('use_block_editor_for_post_type', '__return_false', 10);
-
+add_filter('use_block_editor_for_post_type', '__return_false', 100);
 
 /* add browser identification to the body classes */
 function browser_body_class($classes) {
